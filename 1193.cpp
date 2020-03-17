@@ -1,61 +1,33 @@
 #include <iostream>
-#include <cmath>
-
 using namespace std;
 
 int main()
 {
 	int X; cin >> X;
 	
-	int last_dir = 1; // 오른쪽위=0, 왼쪽아래=1
+	int last_dir = 0; // 오른쪽위=0, 왼쪽아래=1 라고 약속
 	
 	// 좌표
-	int x = 0;
-	int y = 0;
+	int x = 1;
+	int y = 1;
 	
 	for(int i = 1; i<X ; ++i)
 	{
-		if(x==0) // 맨위
+		if(x==1) // 맨위
 		{
-			if(y%2 == 0) // 0/0, 0/2 ... : 오른쪽 
-			{
-				y++;
-				continue;
-			}
-			else // 0/1, 0/3 ... : 왼쪽아래
-			{
-				y--; x++;
-				last_dir = 1;
-				continue;
-			}
+			if(y%2 == 1) { y++; continue; }
+			else { y--; x++; last_dir = 1; continue; }
 		}
-		else if(y==0) // 맨왼쪽
+		else if(y==1) // 맨왼쪽
 		{
-			if(x%2 == 0) // 2/0, 4/0 ... : 오른쪽위
-			{
-				x--; y++;
-				last_dir = 0; 
-				continue;
-			}
-			else // 1/0, 3/0 ... : 아래
-			{
-				x++;
-				continue;
-			}
+			if(x%2 == 1) { x--; y++; last_dir = 0; continue; }
+			else { x++; continue; }
 		}
-		else
+		else // 무조건 대각선 
 		{
-			if(last_dir == 1) // 왼쪽아래
-			{
-				x++; y--;
-				continue;
-			}
-			else if(last_dir == 0) // 오른쪽위
-			{
-				x--; y++;
-				continue;
-			}
+			if(last_dir == 1) { x++; y--; continue; }
+			else if(last_dir == 0) { x--; y++; continue; }
 		}
 	}
-	cout << x+1 << '/' << y+1 << endl;
+	cout << x << '/' << y << endl;
 }
