@@ -1,74 +1,25 @@
 
-# Created by https://www.toptal.com/developers/gitignore/api/c,c++,dotnetcore,vscode,python,go
-# Edit at https://www.toptal.com/developers/gitignore?templates=c,c++,dotnetcore,vscode,python,go
+# Created by https://www.toptal.com/developers/gitignore/api/c++,vscode,python
+# Edit at https://www.toptal.com/developers/gitignore?templates=c++,vscode,python
 
-### C ###
+### C++ ###
 # Prerequisites
 *.d
 
-# Object files
+# Compiled Object files
+*.slo
+*.lo
 *.o
-*.ko
 *.obj
-*.elf
-
-# Linker output
-*.ilk
-*.map
-*.exp
 
 # Precompiled Headers
 *.gch
 *.pch
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
-
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
-
-### C++ ###
-# Prerequisites
-
-# Compiled Object files
-*.slo
-
-# Precompiled Headers
-
-# Linker files
-
-# Debugger Files
-
 # Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
 
 # Fortran module files
 *.mod
@@ -76,33 +27,14 @@ dkms.conf
 
 # Compiled Static libraries
 *.lai
+*.la
+*.a
+*.lib
 
 # Executables
-
-### DotnetCore ###
-# .NET Core build folders
-bin/
-obj/
-
-# Common node modules locations
-/node_modules
-/wwwroot/node_modules
-
-### Go ###
-# Binaries for programs and plugins
-*.exe~
-
-# Test binary, built with `go test -c`
-*.test
-
-# Output of the go coverage tool, specifically when used with LiteIDE
-
-# Dependency directories (remove the comment below to include it)
-# vendor/
-
-### Go Patch ###
-/vendor/
-/Godeps/
+*.exe
+*.out
+*.app
 
 ### Python ###
 # Byte-compiled / optimized / DLL files
@@ -251,4 +183,4 @@ dmypy.json
 !.vscode/extensions.json
 *.code-workspace
 
-# End of https://www.toptal.com/developers/gitignore/api/c,c++,dotnetcore,vscode,python,go
+# End of https://www.toptal.com/developers/gitignore/api/c++,vscode,python
